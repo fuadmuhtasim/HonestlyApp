@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <!--need to ensure that the virutal path "hidden" is used when connecting to resources -->
+    <script src="/hidden/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal Webapp</title>
+    <link rel="stylesheet" href="/hidden/styles.css" />
+</head>
+
+<body>
+    <nav class="nav-buttons" id="">
+        <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+    <div class="home-screen">
+        <div class="home-screen-left"></div>
+        <div class="login-section">
+            <section id="home">
+                <h1> Journal Webapp</h1>
+                <p class = logoText>AI Integrated Journaling Solution</p>
+                <p class = logoText>for your daily lists, thoughts and commitments</p>
+            </section>
+
+
+            <section id="Login">
+                <div class="form-container">
+                    <div id = "login-screen">
+                        <form action="/login_form" method="post">
+                            <div class="form-group">
+                                <label class="email-label" for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="password-label" for="password">Password</label>
+                                <input type="password" id="password" name="password" required>
+                            </div>
+                            <div class="button-group">
+                                <button type="submit" name = "signIn" value = "signIn" class = "logInButton">Login</button>
+                                <button type="button" id = "show-signup" name = "signUp" value = "signUp" class = "signUpButton">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div id="signup-screen" class="hidden">
+                        <h2>Sign up</h2>
+                        <form action="/signup_form" method="post">
+                            <div class="form-group">
+                                <label class="email-label" for="new_email">New Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="password-label" for="new_password">New Password</label>
+                                <input type="new_password" id="password" name="password" required>
+                            </div>
+                            <div class="button-group">
+                                <button type="button" id="show-login" class = "logInButton">Back to Login</button>
+                                <button type="submit" name = "signUp" value = "signUp" class = "signUpButton">SignUp</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
