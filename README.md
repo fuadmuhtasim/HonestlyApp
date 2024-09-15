@@ -21,3 +21,15 @@ cd HonestlyApp
 ```
 code . 
 ```
+5. Run the server:
+To run the server you need to run the following command:
+```
+npm start 
+```
+
+6. Check in on your local browser port 3000 to find the page that has been loaded. (signin  signup page)
+It gets loaded from the public folder in the repository called index.html
+(TEAM A: Yib Jared, work on that file before helping out with backend)
+
+7. Create a branch and create that react file mini project
+(Team B) Ibrahim and Blane try looking into this
