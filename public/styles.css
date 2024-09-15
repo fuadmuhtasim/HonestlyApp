@@ -1,6 +1,6 @@
 body {
     background-color: #fcfcfc;
-    text-align: center;
+    text-align: left;
     font-family: Calibri, sans-serif;
     margin: 0px 0px;
     color: 0a0a0a;
@@ -44,6 +44,35 @@ nav ul li a:hover {
     display: block;
     margin: 10px auto;
 }
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    margin: 10px auto;
+    width: 360px;
+    /* background-color: hsla(300, 85%, 3%, 0.5);     */
+    padding: 20px;
+    border: 1px solid #f4f4f4;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.logInButton, .signUpButton {
+    top:50%;
+    background-color:#0a0a23;
+    color: #fff;
+    border:none; 
+    border-radius:10px; 
+    padding:15px;
+    min-height:10px; 
+    min-width: 350px;
+    margin: 5px auto;
+    width: 350px;
+
+  }
+
+
 h1 {
     font-size: 60px;
 }
@@ -52,45 +81,52 @@ h1 {
 }
 
 .form-group{
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 400px;
-    margin: 10px auto;
+    margin: 40px auto;
 
 }
 .email-label {
     color: black;
     text-shadow: black;
     font-size: small;
-    margin-right: 130px;
-    text-align: center;
-    
+    justify-content: baseline;
 }
 #email {
-    padding: 10px 20px;
+    
+    /* padding: 10px 100px; */
+    width: 350px;
+    height: 30px;
     border-style: none;
     background-color: #fcfcfc;
     border: 1px solid rgb(114, 76, 105);
 }
 
 #password {
-    padding: 10px 20px;
+    /* justify-content: flex-start;
+    padding: 10px 100px; */
+    width: 350px;
+    height: 30px;
     border-style: none;
     background-color: #fcfcfc;
     border: 1px solid rgb(114, 76, 105);
 }
 
-
 .password-label {
     color: black;
     text-shadow: black;
     font-size: small;
-    margin-right: 152px;
-    text-align: center;
+    /* margin-right: 152px; */
+    /* text-align: center; */
 }
 
+.input {    
+    border-radius: 10px;
+
+}
 
 .hidden {
     display: none;
