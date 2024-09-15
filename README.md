@@ -10,5 +10,14 @@ npm -v
 
 2. Clone the repository: (using SSH) (Chatgpt this part to know more)
 ```
-git clone git@github.com:fuadmuhtasim/HonestlyApp.git
+git clone git@github.com:yourGithubUsername/HonestlyApp.git
+```
+
+3. Change directory to the root folder:
+```
+cd HonestlyApp
+```
+4. Open the folder in VS Code by using the following steps: (IMPORTANT: After you change the directory)
+```
+code . 
 ```
