@@ -65,4 +65,4 @@ Signup.js saves the login credentials in a PostgresDB using ORM and then starts 
 
 #### Things to think about:
 
-Are there any better architural solution to this problem?
+Are there any better architural solution to this problem? What if we created a microservice(to handle auth) that scaled with each request to that endpoint?
