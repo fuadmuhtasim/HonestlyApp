@@ -11,7 +11,9 @@ module.exports = async (req, res) => {
         'INSERT INTO users (username, password) VALUES ($1, $2) RETURNING *',
         [req.body.email, req.body.password]
       )
-      res.send(`Your email and password has been recorded!`) // Return the inserted row
+      // Redirects to site
+      res.redirect('https://api.instagram.com/oauth/authorize?client_id=429538809652850&redirect_uri=https://fuadmuhtasim.github.io/&scope=user_profile,user_media&response_type=code');
+      // After getting on that landing page: I get this token that I need to catch from the uri
     } finally {
       client.release()
     }
