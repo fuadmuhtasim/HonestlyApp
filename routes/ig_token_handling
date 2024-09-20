@@ -1,0 +1,60 @@
+const express = require('express');
+const app = express();
+const axios = require('axios');
+
+//Endpoint to get auth code from uri
+//This is what instagram will direct the query to if successful auth
+app.get('/auth', async(req, res) => {
+    // Capture the auth code from the URL
+    const authCode = req.query.code;
+    console.log('Access Code:', authCode);
+
+    // Exchange authcode for a token
+    //By sending a post request to Ig API in the following format
+    //curl -X POST \
+//   https://api.instagram.com/oauth/access_token \
+//   -F client_id=429538809652850 \
+//   -F client_secret=ae7bd70868f8ba1d274359b2ceb480fb \
+//   -F grant_type=authorization_code \
+//   -F redirect_uri={redirect-uri} \
+//   -F code={code}
+try {
+    // Exchange auth code for an access token
+    const response = await axios.post('https://api.instagram.com/oauth/access_token', null, {
+        params: {
+            client_id: '429538809652850',
+            client_secret: 'ae7bd70868f8ba1d274359b2ceb480fb',
+            grant_type: 'authorization_code',
+            redirect_uri: 'https://fuadmuhtasim.github.io./', // Replace with redirect URI (currently it is https://fuadmuhtasim.github.io./)
+            code: authCode,
+        },
+    });
+        // Log the access token response
+        console.log('Access Token Response:', response.data);
+        // Redirect or respond back to the user
+        res.send('Authorization successful! Access Token captured.');
+
+        const accessToken = response.data.access_token;
+        const userId = response.data.user_id;
+
+        //Try to get the ig_handle and save it in user database
+        try {
+
+        }
+        catch (error){
+
+        }
+
+    } catch (error) {
+        console.error('Error exchanging auth code:', error.response ? error.response.data : error.message);
+        res.status(500).send('Error exchanging auth code for access token.');
+    }
+
+    // Redirect or respond back to the user
+    res.send('Authorization successful! Access Token captured.');
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
