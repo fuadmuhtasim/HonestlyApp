@@ -1,6 +1,6 @@
 # HonestlyApp
 
-##To run this app:
+## To run this app:
 
 1.  You need to download the node package manager to set up the environment that runs javascript. How to check if it is already installed?
     Run this on the UBUNTU terminal (if you're using WSL it works too!)
