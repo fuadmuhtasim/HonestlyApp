@@ -50,7 +50,7 @@ npm start
 
 First Client clicks on the signup button sending request from server.js calling handler from signup.js handler to handle the request.
 
-Signup.js saves the login credentials in a PostgresDB using ORM and then starts an _event handler_ that sends a redirect request to the Instagram API.
+Signup.js saves the login credentials in a PostgresDB using ORM and then awaits for an async function to resolve which sends a redirect request to the Instagram API.
 
 -> If unsuccessful, IG API calls a backend endpoint (possibly in Ig_token_handling) that terminates this event handler by throwing an error. <br>
 -> If successful, it calls an endpoint in IG_token_handling (/auth) that further communicates with the IG API to get the ig_user_handler and ig_user_media_url.
